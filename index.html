@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Seriously Useful Free Websites | AI with Unnati</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:       #C41B1B;
+      --red-dark:  #9E1515;
+      --cream:     #F5F0E4;
+      --cream-mid: #EDE7D8;
+      --cream-dk:  #DDD7C8;
+      --black:     #1A1A1A;
+      --white:     #FFFFFF;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    /* ─── HEADER ─────────────────────────────── */
+    header {
+      background: var(--cream);
+      padding: 22px 24px 18px;
+      text-align: center;
+      border-bottom: 2px solid var(--red);
+    }
+    .brand {
+      font-family: 'Anton', sans-serif;
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+    }
+    .sub-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--black);
+      opacity: 0.55;
+      margin-top: 4px;
+    }
+
+    /* ─── HERO ───────────────────────────────── */
+    .hero {
+      background: var(--red);
+      padding: 52px 24px 48px;
+      text-align: center;
+      color: var(--white);
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 4px 14px;
+      margin-bottom: 22px;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 46px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .hero h1 span {
+      display: block;
+      font-size: 36px;
+      opacity: 0.88;
+    }
+    .hero-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.92;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      display: block;
+    }
+    .stat-lbl {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    /* ─── ORDER BANNER ───────────────────────── */
+    .order-banner {
+      background: var(--black);
+      padding: 16px 24px;
+      text-align: center;
+    }
+    .order-banner p {
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .order-banner span {
+      color: var(--red);
+    }
+
+    /* ─── CARDS WRAPPER ──────────────────────── */
+    .cards-section {
+      background: var(--red);
+      padding: 28px 18px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* ─── SINGLE CARD ────────────────────────── */
+    .card {
+      background: var(--cream);
+      padding: 28px 22px 24px;
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .step-badge {
+      font-family: 'Anton', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--white);
+      background: var(--red);
+      padding: 4px 10px;
+      flex-shrink: 0;
+    }
+    .card-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+    .card h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .provider-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-left: 3px solid var(--red);
+      padding: 3px 10px 3px 8px;
+      background: var(--cream-mid);
+      margin-bottom: 14px;
+      color: var(--black);
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: var(--black);
+      color: var(--cream);
+    }
+    .tag.free { background: #1D6B1D; color: #fff; }
+    .tag.labs { background: var(--red); color: #fff; }
+
+    .insight-box {
+      background: var(--cream-mid);
+      border-left: 4px solid var(--red);
+      padding: 13px 14px;
+      margin-bottom: 14px;
+    }
+    .insight-box p {
+      font-size: 14px;
+      font-style: italic;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .card-body {
+      font-size: 14.5px;
+      color: #333;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .learn-list {
+      list-style: none;
+      margin-bottom: 20px;
+      border-top: 1px solid var(--cream-dk);
+    }
+    .learn-list li {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      font-size: 13.5px;
+      color: var(--black);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .learn-list li::before {
+      content: "→";
+      color: var(--red);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .enroll-btn {
+      display: block;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      transition: background 0.2s ease;
+    }
+    .enroll-btn:hover { background: var(--red-dark); }
+
+    /* ─── TIPS SECTION ───────────────────────── */
+    .tips-section {
+      background: var(--cream);
+      padding: 40px 20px;
+    }
+    .tips-header {
+      font-family: 'Anton', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .tips-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    .tip-card {
+      background: var(--cream-mid);
+      border-left: 4px solid var(--red);
+      padding: 20px 18px;
+      margin-bottom: 16px;
+    }
+    .tip-card .tip-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .tip-card h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .tip-card p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* ─── FOLLOW CTA ──────────────────────────── */
+    .follow-section {
+      background: var(--red);
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+    .follow-section .f-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 10px;
+    }
+    .follow-section h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 32px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .follow-section p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .follow-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--red);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 15px 28px;
+      transition: opacity 0.2s;
+    }
+    .follow-btn:hover { opacity: 0.88; }
+
+    /* ─── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    footer .f-brand {
+      font-family: 'Anton', sans-serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    footer .f-handle {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 14px;
+    }
+    footer .f-copy {
+      font-size: 11px;
+      opacity: 0.4;
+      letter-spacing: 0.5px;
+    }
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--red);
+      margin: 12px auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">AI with Unnati</div>
+  <div class="sub-brand">@aiwithunnati &nbsp;·&nbsp; by Unnati Tripathi</div>
+</header>
+
+<div class="hero">
+  <div class="hero-label">Free Guide · Save This One</div>
+  <h1>
+    5 Seriously Useful Websites
+    <span>You'll Keep Using for Years</span>
+  </h1>
+  <p class="hero-desc">
+    Finance, government courses, fitness, English and confidence. Every resource here is free to learn from, and there's a good chance one of them is exactly what you need.
+  </p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">5</span><span class="stat-lbl">Resources</span></div>
+    <div class="stat"><span class="stat-num">₹0</span><span class="stat-lbl">To Learn</span></div>
+    <div class="stat"><span class="stat-num">5</span><span class="stat-lbl">Life Skills</span></div>
+  </div>
+</div>
+
+<div class="order-banner">
+  <p>Bookmark all 5 — <span>pick the one you need today</span></p>
+</div>
+
+<div class="cards-section">
+  <div class="card">
+    <div class="card-top">
+      <span class="step-badge">#01</span>
+      <span class="card-eyebrow">Finance · Stock Market</span>
+    </div>
+    <h2>Varsity by Zerodha</h2>
+    <div class="provider-tag">Zerodha · Karthik Rangappa</div>
+    <div class="tags"><span class="tag free">FREE</span><span class="tag">No Signup</span><span class="tag">No Ads</span><span class="tag">Modules + Videos</span></div>
+    <div class="insight-box"><p>"If you want to understand money, markets and investing, this is the one resource you'll keep coming back to for years. No paywall, no sign-up, nothing to buy."</p></div>
+    <p class="card-body">A huge open library of finance and stock market lessons from Zerodha. Bite-size modules, quizzes and videos that take you from the basics of saving and tax all the way to options and technical analysis.</p>
+    <ul class="learn-list"><li>Business & personal finance basics</li><li>Trading and how the stock market works</li><li>Mutual funds, investing & taxation</li><li>Technical & fundamental analysis</li><li>Futures, options & trading strategies</li></ul>
+    <a class="enroll-btn" href="https://zerodha.com/varsity/" target="_blank" rel="noopener">Start Learning → Varsity</a>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <span class="step-badge">#02</span>
+      <span class="card-eyebrow">Govt of India · All Subjects</span>
+    </div>
+    <h2>SWAYAM</h2>
+    <div class="provider-tag">Ministry of Education · Government of India</div>
+    <div class="tags"><span class="tag free">FREE</span><span class="tag">Coding</span><span class="tag">Business</span><span class="tag">Marketing</span><span class="tag">100s of Courses</span></div>
+    <div class="insight-box"><p>"These aren't random courses. A lot of them are taught by professors from India's top institutes, so they genuinely help you upskill and become more job-ready."</p></div>
+    <p class="card-body">India's official government learning platform. Whatever you're into, coding, business, marketing and much more, you'll find full courses with video lectures, reading material, quizzes and a discussion forum.</p>
+    <ul class="learn-list"><li>Courses by professors from IITs, IIMs & top universities</li><li>Coding, engineering, business, marketing & more</li><li>Video lectures + downloadable reading material</li><li>Weekly quizzes and assignments</li><li>Learning is free (an optional proctored exam for a certificate has a fee)</li></ul>
+    <a class="enroll-btn" href="https://swayam.gov.in/" target="_blank" rel="noopener">Browse Courses → SWAYAM</a>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <span class="step-badge">#03</span>
+      <span class="card-eyebrow">Fitness · Diet · Training</span>
+    </div>
+    <h2>The Fitness Wiki</h2>
+    <div class="provider-tag">Official wiki of r/Fitness & r/weightroom</div>
+    <div class="tags"><span class="tag free">FREE</span><span class="tag">Fat Loss</span><span class="tag">Muscle Gain</span><span class="tag">Workout Routines</span></div>
+    <div class="insight-box"><p>"Not able to lose fat? Not able to gain weight? Pretty much every answer you need is in here, explained properly and for free."</p></div>
+    <p class="card-body">The community-built fitness guide from Reddit's biggest fitness communities. What to eat, how to eat, when to eat, how much to eat, and what you should actually be doing in the gym.</p>
+    <ul class="learn-list"><li>Weight Loss 101: the fundamentals of losing fat</li><li>Muscle Building 101: how to actually gain</li><li>Improving your diet, step by step</li><li>Recommended beginner workout routines</li><li>Guided Tour: the best pages for your exact goal</li></ul>
+    <a class="enroll-btn" href="https://thefitness.wiki/" target="_blank" rel="noopener">Read the Wiki → TheFitness.Wiki</a>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <span class="step-badge">#04</span>
+      <span class="card-eyebrow">English · Grammar · Speaking</span>
+    </div>
+    <h2>LearnEnglish</h2>
+    <div class="provider-tag">British Council</div>
+    <div class="tags"><span class="tag free">FREE</span><span class="tag">Grammar</span><span class="tag">Vocabulary</span><span class="tag">Free Level Test</span></div>
+    <div class="insight-box"><p>"If you want to improve your English, this is from the world's English-teaching experts. Start with the free level test so you know exactly where you stand."</p></div>
+    <p class="card-body">The British Council's learning site for adults. Grammar and vocabulary by level, plus listening, reading, writing and speaking practice with interactive exercises that show your right and wrong answers.</p>
+    <ul class="learn-list"><li>Free online English level test</li><li>Grammar lessons from A1 to C1</li><li>Vocabulary practice by level</li><li>Listening, reading, writing & speaking skills</li><li>Business English for work</li></ul>
+    <a class="enroll-btn" href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener">Start Learning → British Council</a>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <span class="step-badge">#05</span>
+      <span class="card-eyebrow">Communication · Confidence</span>
+    </div>
+    <h2>Skillopedia</h2>
+    <div class="provider-tag">YouTube · Skills for the real world</div>
+    <div class="tags"><span class="tag free">FREE</span><span class="tag">YouTube</span><span class="tag">Communication</span><span class="tag">Confidence</span></div>
+    <div class="insight-box"><p>"If you lack confidence or just don't feel comfortable talking to people, this channel can genuinely take your confidence from here to here."</p></div>
+    <p class="card-body">A YouTube channel with hundreds of short videos on soft skills. Head to the Playlists tab and work through the communication and confidence videos one by one.</p>
+    <ul class="learn-list"><li>How to start a conversation with anyone</li><li>Sounding confident even when you're not</li><li>Public speaking & beating stage fear</li><li>Improving everyday English communication</li><li>Body language, first impressions & small talk</li></ul>
+    <a class="enroll-btn" href="https://www.youtube.com/@skillopedia/playlists" target="_blank" rel="noopener">Watch Playlists → YouTube</a>
+  </div>
+</div>
+
+<div class="tips-section">
+  <p class="tips-header">Pro Tips</p>
+  <h2 class="tips-title">How to Actually Use These</h2>
+  <div class="tip-card">
+    <div class="tip-label">Don't Hoard</div>
+    <h3>Pick One, Not All Five</h3>
+    <p>Saving resources feels productive, using them is what changes things. Choose the one that fixes your biggest problem right now and give it 20 minutes a day for two weeks.</p>
+  </div>
+  <div class="tip-card">
+    <div class="tip-label">SWAYAM</div>
+    <h3>Check the Course Dates</h3>
+    <p>Many SWAYAM courses run in semesters with enrolment windows. Learning is free; if you want the certificate, register for the proctored exam before the deadline.</p>
+  </div>
+  <div class="tip-card">
+    <div class="tip-label">Fitness Wiki</div>
+    <h3>Start With the Guided Tour</h3>
+    <p>The wiki is huge. The Guided Tour page lists the 3–5 best pages for your exact goal, whether that's losing fat, gaining weight or getting stronger.</p>
+  </div>
+  <div class="tip-card">
+    <div class="tip-label">Confidence</div>
+    <h3>Pair Skillopedia With Practice</h3>
+    <p>Watch one video, then use that one tip in a real conversation the same day. Combine it with British Council speaking practice and you'll feel the difference fast.</p>
+  </div>
+</div>
+
+<div class="follow-section">
+  <p class="f-label">More Free Resources</p>
+  <h2>Follow for More Free Guides Like This</h2>
+  <p>AI tools, career tips and genuinely useful free resources, every single day.</p>
+  <a class="follow-btn" href="https://www.instagram.com/aiwithunnati" target="_blank" rel="noopener">Follow @aiwithunnati →</a>
+</div>
+
+<footer>
+  <div class="f-brand">AI with Unnati</div>
+  <div class="f-handle">Unnati Tripathi · CEO &amp; Co-Founder, Maester Labs · @aiwithunnati on Instagram</div>
+  <div class="divider"></div>
+  <div class="f-copy">© 2026 Unnati Tripathi. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
